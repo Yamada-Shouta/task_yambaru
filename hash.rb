@@ -7,22 +7,18 @@ users.each do |user|
 
   puts "-------------------------"
 
-  puts <<~TEXT
-  #{user[:name]}さん
-  年齢#{user[:age]}歳
-  身長#{user[:height]}cm
-  TEXT
+  puts "#{user[:name]}さん"
 
   if user[:age] <= 64
-    puts "年齢確認OK"
+    puts "年齢#{user[:age]}歳: 年齢確認OK"
   else
-    puts "年齢確認NG"
+    puts "年齢#{user[:age]}歳: 年齢確認NG"
   end
 
   if user[:height] >= 130
-    puts "身長確認OK"
+    puts "身長#{user[:height]}cm: 身長確認OK"
   else
-    puts "身長確認NG"
+    puts "身長#{user[:height]}cm: 身長確認NG"
   end
 
   if user[:age] <= 64 && user[:height] >= 130
